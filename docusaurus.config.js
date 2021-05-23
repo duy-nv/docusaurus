@@ -153,4 +153,14 @@ module.exports = {
      },
    ],
   ],
+  plugins: [
+    // ["docusaurus-plugin-openapi", {
+    //   id: 'plugin-1',
+    //   openapiPath: require.resolve("./openapi/one.json"), routeBasePath: 'api-one',
+    // }],
+    ["docusaurus-plugin-openapi", {
+      id: 'plugin-2',
+      openapiPath: require.resolve("./openapi/transcode-channel.json"), routeBasePath: 'api-two',
+    }]
+  ]
 };
