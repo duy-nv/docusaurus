@@ -32,7 +32,8 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { to: 'blog', label: 'Blog', position: 'left' },
+        {to: 'api-redocusaurus', label: 'Spec Redocusaurus', position: 'left'},
         // Please keep GitHub link to the right for consistency.
         {
           href: 'https://github.com/facebook/docusaurus',
@@ -140,5 +141,16 @@ module.exports = {
         },
       },
     ],
+    [
+     "redocusaurus",
+     {
+       specs: [
+         {
+           routePath: "/api-redocusaurus/",
+           specUrl: "http://dev-livestream.gviet.vn/auth-service/v1/api-docs-json",
+         },
+       ],
+     },
+   ],
   ],
 };
