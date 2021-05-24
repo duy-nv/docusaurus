@@ -7,6 +7,8 @@
  * @format
  */
 
+const path = require("path");
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'My Site',
@@ -161,6 +163,12 @@ module.exports = {
     ["docusaurus-plugin-openapi", {
       id: 'plugin-2',
       openapiPath: require.resolve("./openapi/transcode-channel.json"), routeBasePath: 'api-two',
-    }]
+    }],
+    [
+      path.resolve(__dirname, "./plugins/open-api-docs"),
+      {
+        id: 'open-api-docs'
+      },
+    ],
   ]
 };

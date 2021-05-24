@@ -4,6 +4,9 @@
 # Production
 /build
 
+# Plugin
+/plugins
+
 # Generated files
 .docusaurus
 .cache-loader
