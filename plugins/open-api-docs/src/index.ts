@@ -54,6 +54,7 @@ export default function pluginContentDocs(
   context: LoadContext,
   options: PluginOptions,
 ): Plugin<LoadedContent> {
+  console.log('[context]', context)
   const {siteDir, generatedFilesDir, baseUrl, siteConfig} = context;
 
   const versionsMetadata = readVersionsMetadata({context, options});
@@ -63,7 +64,7 @@ export default function pluginContentDocs(
 
   const pluginDataDirRoot = path.join(
     generatedFilesDir,
-    'docusaurus-plugin-content-docs',
+    'docusaurus-plugin-api-docs',
   );
   const dataDir = path.join(pluginDataDirRoot, pluginId);
   const aliasedSource = (source: string) =>

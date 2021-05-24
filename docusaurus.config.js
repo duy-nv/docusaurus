@@ -35,6 +35,7 @@ module.exports = {
           position: 'left',
         },
         { to: 'blog', label: 'Blog', position: 'left' },
+        { to: 'open-api/', label: 'Open API', position: 'left' },
         {to: 'api-redocusaurus', label: 'Spec Redocusaurus', position: 'left'},
         // Please keep GitHub link to the right for consistency.
         {
@@ -127,7 +128,9 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars/guide-sidebar.js'),
+          path: 'docs',
+          routeBasePath: 'docs',
           // Please change this to your repo.
           editUrl:
             'https://github.com/facebook/docusaurus/edit/master/website/',
@@ -143,32 +146,47 @@ module.exports = {
         },
       },
     ],
-    [
-     "redocusaurus",
-     {
-       specs: [
-         {
-           routePath: "/api-redocusaurus/",
-           specUrl: "http://dev-livestream.gviet.vn/auth-service/v1/api-docs-json",
-         },
-       ],
-     },
-   ],
+  //   [
+  //    "redocusaurus",
+  //    {
+  //      specs: [
+  //        {
+  //          routePath: "/api-redocusaurus/",
+  //          specUrl: "http://dev-livestream.gviet.vn/auth-service/v1/api-docs-json",
+  //        },
+  //      ],
+  //    },
+  //  ],
   ],
   plugins: [
     // ["docusaurus-plugin-openapi", {
     //   id: 'plugin-1',
     //   openapiPath: require.resolve("./openapi/one.json"), routeBasePath: 'api-one',
     // }],
-    ["docusaurus-plugin-openapi", {
-      id: 'plugin-2',
-      openapiPath: require.resolve("./openapi/transcode-channel.json"), routeBasePath: 'api-two',
-    }],
-    [
-      path.resolve(__dirname, "./plugins/open-api-docs"),
-      {
-        id: 'open-api-docs'
-      },
-    ],
+    // ["docusaurus-plugin-openapi", {
+    //   id: 'plugin-2',
+    //   openapiPath: require.resolve("./openapi/transcode-channel.json"), routeBasePath: 'api-two',
+    // }],
+    // [
+    //   '@docusaurus/plugin-content-docs',
+    //   {
+    //     id: "guide",
+    //     sidebarPath: require.resolve('./sidebars/api-sidebar.js'),
+    //     path: 'openapi',
+    //     routeBasePath: 'openapi',
+    //     // Please change this to your repo.
+    //     editUrl:
+    //       'https://github.com/facebook/docusaurus/edit/master/website/',
+    //   },
+    // ],
+    // [
+    //   path.resolve(__dirname, "./plugins/open-api-docs"),
+    //   {
+    //     id: "openApiDoc",
+    //     path: 'openapi',
+    //     routeBasePath: 'open-api',
+    //     sidebarPath: require.resolve("./sidebars/api-sidebar.js"),
+    //   },
+    // ],
   ]
 };

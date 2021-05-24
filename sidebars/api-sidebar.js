@@ -8,12 +8,7 @@
  */
 
 module.exports = {
-  someSidebar: {
-    Docusaurus: ['doc01', 'doc02'],
-    Features: ['mdx'],
-  },
-  // otherSidebar: {
-  //   Docusaurus: ['doc03'],
-  //   Features: ['mdx'],
-  // },
+  apiSidebar: {
+    Installation: ["openApi01"],
+  }
 };

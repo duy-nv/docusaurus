@@ -1,7 +1,7 @@
 ---
-id: doc01
-title: Style Guide
-sidebar_label: Style Guide
+id: openApi01
+title: Open API 01
+sidebar_label: Open API 01
 slug: /
 ---
 

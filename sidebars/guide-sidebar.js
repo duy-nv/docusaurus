@@ -8,12 +8,7 @@
  */
 
 module.exports = {
-  someSidebar: {
-    Docusaurus: ['doc01', 'doc02'],
-    Features: ['mdx'],
+  guideSidebar: {
+    Installation: ["doc01", "doc02"], // from path `docs/doc1`
   },
-  // otherSidebar: {
-  //   Docusaurus: ['doc03'],
-  //   Features: ['mdx'],
-  // },
 };
