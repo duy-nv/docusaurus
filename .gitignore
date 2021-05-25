@@ -5,7 +5,7 @@
 /build
 
 # Plugin
-/plugins
+/plugins/open-api-docs/lib/*
 
 # Generated files
 .docusaurus
