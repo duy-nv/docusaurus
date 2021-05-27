@@ -64,14 +64,14 @@ export default function pluginContentDocs(
 
   const pluginDataDirRoot = path.join(
     generatedFilesDir,
-    'docusaurus-plugin-api-docs',
+    'docusaurus-plugin-open-api-docs',
   );
   const dataDir = path.join(pluginDataDirRoot, pluginId);
   const aliasedSource = (source: string) =>
-    `~docs/${posixPath(path.relative(pluginDataDirRoot, source))}`;
+    `~openapi/${posixPath(path.relative(pluginDataDirRoot, source))}`;
 
   return {
-    name: 'docusaurus-plugin-content-docs',
+    name: 'docusaurus-plugin-open-api-docs',
 
     getThemePath() {
       return path.resolve(__dirname, './theme');

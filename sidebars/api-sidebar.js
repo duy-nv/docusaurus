@@ -9,6 +9,6 @@
 
 module.exports = {
   apiSidebar: {
-    Installation: ["openApi01"],
+    Installation: ["openApixxx"],
   }
 };

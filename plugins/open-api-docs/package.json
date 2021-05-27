@@ -19,8 +19,12 @@
   "license": "MIT",
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.0.0-beta.0",
+    "@types/fs-extra": "^9.0.11",
     "@types/js-yaml": "^4.0.0",
+    "@types/lodash": "^4.14.170",
     "@types/picomatch": "^2.2.1",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/shelljs": "^0.8.8",
     "commander": "^5.1.0",
     "picomatch": "^2.1.1"
   },

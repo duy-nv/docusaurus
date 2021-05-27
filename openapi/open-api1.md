@@ -1,5 +1,5 @@
 ---
-id: openApi01
+id: openApixxx
 title: Open API 01
 sidebar_label: Open API 01
 slug: /

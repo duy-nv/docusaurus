@@ -179,14 +179,14 @@ module.exports = {
     //       'https://github.com/facebook/docusaurus/edit/master/website/',
     //   },
     // ],
-    // [
-    //   path.resolve(__dirname, "./plugins/open-api-docs"),
-    //   {
-    //     id: "openApiDoc",
-    //     path: 'openapi',
-    //     routeBasePath: 'open-api',
-    //     sidebarPath: require.resolve("./sidebars/api-sidebar.js"),
-    //   },
-    // ],
+    [
+      path.resolve(__dirname, "./plugins/open-api-docs"),
+      {
+        id: "openApiDoc",
+        path: 'openapi',
+        routeBasePath: 'open-api',
+        sidebarPath: require.resolve('./sidebars/api-sidebar.js'),
+      },
+    ],
   ]
 };
