@@ -6,7 +6,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getDocVersionSuggestions = exports.getActiveDocContext = exports.getActiveVersion = exports.getLatestVersion = exports.getActivePlugin = void 0;
 const router_1 = require("@docusaurus/router");
 function getActivePlugin(allPluginDatas, pathname, options = {}) {
     const activeEntry = Object.entries(allPluginDatas).find(([_id, pluginData]) => {
@@ -27,13 +26,12 @@ function getActivePlugin(allPluginDatas, pathname, options = {}) {
     return activePlugin;
 }
 exports.getActivePlugin = getActivePlugin;
-const getLatestVersion = (data) => {
+exports.getLatestVersion = (data) => {
     return data.versions.find((version) => version.isLast);
 };
-exports.getLatestVersion = getLatestVersion;
 // Note: return undefined on doc-unrelated pages,
 // because there's no version currently considered as active
-const getActiveVersion = (data, pathname) => {
+exports.getActiveVersion = (data, pathname) => {
     const lastVersion = exports.getLatestVersion(data);
     // Last version is a route like /docs/*,
     // we need to try to match it last or it would match /docs/version-1.0/* as well
@@ -49,8 +47,7 @@ const getActiveVersion = (data, pathname) => {
         });
     });
 };
-exports.getActiveVersion = getActiveVersion;
-const getActiveDocContext = (data, pathname) => {
+exports.getActiveDocContext = (data, pathname) => {
     const activeVersion = exports.getActiveVersion(data, pathname);
     const activeDoc = activeVersion === null || activeVersion === void 0 ? void 0 : activeVersion.docs.find((doc) => !!router_1.matchPath(pathname, {
         path: doc.path,
@@ -77,18 +74,15 @@ const getActiveDocContext = (data, pathname) => {
         alternateDocVersions: alternateVersionDocs,
     };
 };
-exports.getActiveDocContext = getActiveDocContext;
-const getDocVersionSuggestions = (data, pathname) => {
+exports.getDocVersionSuggestions = (data, pathname) => {
     const latestVersion = exports.getLatestVersion(data);
     const activeDocContext = exports.getActiveDocContext(data, pathname);
     // We only suggest another doc/version if user is not using the latest version
     const isNotOnLatestVersion = activeDocContext.activeVersion !== latestVersion;
     const latestDocSuggestion = isNotOnLatestVersion
-        ? activeDocContext === null || activeDocContext === void 0 ? void 0 : activeDocContext.alternateDocVersions[latestVersion.name]
-        : undefined;
+        ? activeDocContext === null || activeDocContext === void 0 ? void 0 : activeDocContext.alternateDocVersions[latestVersion.name] : undefined;
     const latestVersionSuggestion = isNotOnLatestVersion
         ? latestVersion
         : undefined;
     return { latestDocSuggestion, latestVersionSuggestion };
 };
-exports.getDocVersionSuggestions = getDocVersionSuggestions;
