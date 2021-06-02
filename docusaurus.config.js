@@ -8,28 +8,29 @@
  */
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
+  title: 'Sigma OTT',
+  tagline: 'A High-Performance, Logs, Metrics, & Events Router',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  favicon: '/favicon.ico',
+  organizationName: 'thudojsc',
+  projectName: 'sigma-ott',
   themeConfig: {
     navbar: {
-      title: 'My Facebook Project',
+      hideOnScroll: true,
       logo: {
-        alt: 'My Facebook Project Logo',
+        alt: 'Sigma',
         src: 'img/logo.svg',
       },
       items: [
         {
-          to: 'docs/',
+          to: '/docs/drm/about/introduction',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Doc',
           position: 'left',
         },
         {to: 'blog', label: 'Blog', position: 'left'},
@@ -118,6 +119,11 @@ module.exports = {
       // Please do not remove the credits, help to publicize Docusaurus :)
       copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`,
     },
+    algolia: {
+      apiKey: '2356c5cb76b57b43624c6450b0a031cc',
+      indexName: 'timberio_vector',
+      algoliaOptions: {}, // Optional, if provided by Algolia
+    },
   },
   presets: [
     [
@@ -125,9 +131,9 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+          // editUrl:
+            // 'https://github.com/facebook/docusaurus/edit/master/website/',
+          docLayoutComponent: '@site/src/theme/DocPage',
         },
         blog: {
           showReadingTime: true,

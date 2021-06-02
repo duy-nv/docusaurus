@@ -9,7 +9,36 @@
 
 module.exports = {
   someSidebar: {
-    Docusaurus: ['doc1', 'doc2', 'doc3'],
-    Features: ['mdx'],
+    DRM: [{
+      type: 'doc',
+      label: 'Introduction',
+      id: 'drm/about/introduction'
+    }, {
+      type: 'category',
+      label: 'Integrate Guide',
+      items: [
+        'drm/guide/android',
+        'drm/guide/ios',
+        'drm/guide/web'
+      ]
+    }],
+    Livestream: ['mdx'],
+    API:[
+      {
+        type: 'link',
+        label: 'To new page',
+        href: '/doc-specs',
+      },
+      {
+        id: 'api/auth',
+        type: 'doc',
+        label: 'Auth Service',
+      },
+      {
+        id: 'api/livestream',
+        type: 'doc',
+        label: 'Livestream Service'
+      }
+    ],
   },
 };
