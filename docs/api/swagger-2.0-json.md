@@ -1,10 +1,10 @@
 ---
-title: Auth
+title: Swagger 2.0
 hide_title: true
-sidebar_label: Authentication
+sidebar_label: Swagger 2.0
 hide_table_of_contents: true
 ---
 
 import AppSpec from '@site/src/components/AppSpec';
 
-<AppSpec specUrl="auth.json"> ></AppSpec>
+<AppSpec specUrl="pet.json"> ></AppSpec>

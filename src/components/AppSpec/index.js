@@ -5,37 +5,28 @@
  * LICENSE file in the root directory of this source tree.
  *
  */
+
 // eslint-disable-next-line header/header
 import React from 'react';
 import 'rapidoc';
 import useTheme from '@theme/hooks/useTheme'
 import './styles.module.css';
-import { readFile } from '@site/src/utils/read-file'
-
-// import globalStyles from '@site/src/css/custom.module.css'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 function AppSpec(props) {
 
-  const { isDarkTheme } = useTheme()
-  const theme = isDarkTheme ? 'dark' : 'light'
+  const { isDarkTheme } = useTheme();
+  const theme = isDarkTheme ? 'dark' : 'light';
   
-  const { specUrl } = props
+  // const context = useDocusaurusContext();
+  const specFolder = 'specs'
+  const { specUrl } = props;
 
-  const specRoot = '/specs'
-
-  // const content = readFile(`${specRoot}${specUrl}`)
-
-  // console.log('fullSpecUrl', content)
-
-  // if (!fullSpecUrl || !fs.existsSync(fullSpecUrl)) {
-  //   return null;
-  // }
+  const specPath = `../../${specFolder}/${specUrl}`
 
   return (
     <rapi-doc
-      // spec-url = "https://petstore.swagger.io/v2/swagger.json"
-      spec-url = "../../specs/pet.json"
-      // spec-url = "https://dev-livestream.gviet.vn/auth-service/v1/api-docs-json"
+      spec-url = { specPath }
       render-style = "focused"
       style = {{ width: "100%" }}
       theme = { theme }
@@ -45,7 +36,7 @@ function AppSpec(props) {
       allow-spec-url-load	= "false"
       allow-spec-file-load = "false"
       allow-server-selection	= "false"
-      default-api-server = 'http://example.com/api'
+      default-api-server = '/'
       allow-try	= "false"
       font-size = "large"
      />

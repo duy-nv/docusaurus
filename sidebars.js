@@ -25,19 +25,32 @@ module.exports = {
     Livestream: ['mdx'],
     API:[
       {
-        type: 'link',
-        label: 'To new page',
-        href: '/doc-specs',
+        id: 'api/basic-spec',
+        type: 'doc',
+      },
+      {
+        id: 'api/markdown-headings',
+        type: 'doc',
+      },
+      {
+        id: 'api/openapi-3.0-json',
+        type: 'doc',
+      },
+      {
+        id: 'api/swagger-2.0-json',
+        type: 'doc',
+      },
+      {
+        id: 'api/yaml-data-types',
+        type: 'doc',
       },
       {
         id: 'api/auth',
         type: 'doc',
-        label: 'Auth Service',
       },
       {
-        id: 'api/livestream',
+        id: 'api/transcode',
         type: 'doc',
-        label: 'Livestream Service'
       }
     ],
   },
