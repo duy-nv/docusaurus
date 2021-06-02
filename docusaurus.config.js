@@ -20,6 +20,7 @@ module.exports = {
   organizationName: 'thudojsc',
   projectName: 'sigma-ott',
   themeConfig: {
+    hideableSidebar: true,
     navbar: {
       hideOnScroll: true,
       logo: {
