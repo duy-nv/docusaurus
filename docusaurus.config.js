@@ -8,6 +8,7 @@
  */
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+const specConfigs = require('./specs.config');
 
 module.exports = {
   title: 'Sigma OTT',
@@ -30,8 +31,12 @@ module.exports = {
       items: [
         {
           to: '/docs/drm/about/introduction',
-          activeBasePath: 'docs',
           label: 'Doc',
+          position: 'left',
+        },
+        {
+          to: '/docs/api/authentication',
+          label: 'APIs',
           position: 'left',
         },
         {to: 'blog', label: 'Blog', position: 'left'},
@@ -44,7 +49,6 @@ module.exports = {
       ],
     },
     footer: {
-      style: 'dark',
       links: [
         {
           title: 'Learn',
@@ -125,6 +129,7 @@ module.exports = {
       indexName: 'timberio_vector',
       algoliaOptions: {}, // Optional, if provided by Algolia
     },
+    specs: specConfigs,
   },
   presets: [
     [
