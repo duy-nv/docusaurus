@@ -137,7 +137,6 @@
      versionMetadata,
      location,
    } = props;
-   console.log('[props]', props)
    const currentDocRoute = docRoutes.find((docRoute) =>
      matchPath(location.pathname, docRoute),
    );

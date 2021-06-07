@@ -23,35 +23,35 @@ module.exports = {
       ]
     }],
     Livestream: ['mdx'],
-    API:[
-      {
-        id: 'api/basic-spec',
-        type: 'doc',
-      },
-      {
-        id: 'api/markdown-headings',
-        type: 'doc',
-      },
-      {
-        id: 'api/openapi-3.0-json',
-        type: 'doc',
-      },
-      {
-        id: 'api/swagger-2.0-json',
-        type: 'doc',
-      },
-      {
-        id: 'api/yaml-data-types',
-        type: 'doc',
-      },
-      {
-        id: 'api/auth',
-        type: 'doc',
-      },
-      {
-        id: 'api/transcode',
-        type: 'doc',
-      }
-    ],
+    // API:[
+    //   {
+    //     id: 'api/basic-spec',
+    //     type: 'doc',
+    //   },
+    //   {
+    //     id: 'api/markdown-headings',
+    //     type: 'doc',
+    //   },
+    //   {
+    //     id: 'api/openapi-3.0-json',
+    //     type: 'doc',
+    //   },
+    //   {
+    //     id: 'api/swagger-2.0-json',
+    //     type: 'doc',
+    //   },
+    //   {
+    //     id: 'api/yaml-data-types',
+    //     type: 'doc',
+    //   },
+    //   {
+    //     id: 'api/auth',
+    //     type: 'doc',
+    //   },
+    //   {
+    //     id: 'api/transcode',
+    //     type: 'doc',
+    //   }
+    // ],
   },
 };

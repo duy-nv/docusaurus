@@ -1,0 +1,61 @@
+.react-select-container .react-select__control {
+  background-color: var(--ifm-panel-background-color);
+  border-color: var(--ifm-panel-border-color);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-panel-box-shadow);
+  box-sizing: border-box;
+  color: var(--ifm-font-color-base);
+}
+.react-select-container .react-select__single-value {
+  color: var(--ifm-font-color-base);
+}
+.react-select-container .react-select__indicator-separator {
+  background-color: var(--ifm-color-emphasis-200)
+}
+.react-select-container .react-select__single-value {
+  color: var(--ifm-font-color-base)
+}
+.react-select-container:hover .react-select__control {
+  background: rgba(40,217,242,.2);
+  background: var(--ifm-panel-background-color-active);
+  border-color: #28d9f2;
+  border-color: var(--ifm-panel-border-color-active);
+  box-shadow: 0 0 10px 0 rgba(40,217,242,.5);
+  box-shadow: var(--ifm-panel-box-shadow-active)
+}
+.react-select-container .react-select__menu {
+  background: #f2f3f5;
+  background: var(--ifm-panel-background-color-solid);
+  border-radius: var(--ifm-global-radius);
+  color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-color-content)
+}
+.react-select-container .react-select__option:hover {
+  background: #28d9f2;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  color: var(--ifm-background-color)
+}
+.react-select-container .react-select__option--is-selected {
+  background: rgba(40,217,242,.2)!important;
+  background: var(--ifm-panel-background-color-active)!important;
+  color: #28d9f2!important;
+  color: var(--ifm-color-primary)!important;
+  font-weight: 700
+}
+.react-select-container .react-select__option--is-focused {
+  background: rgba(40,217,242,.2);
+  background: var(--ifm-panel-background-color-active);
+  color: var(--ifm-color-emphasis-800);
+  color: var(--ifm-color-content)
+}
+.react-select-container .react-select__placeholder {
+  color: var(--ifm-color-emphasis-600);
+  color: var(--ifm-color-content-secondary);
+}
+.react-select--sm {
+  font-size: .8em
+}
+.react-select--lg {
+  font-size: 1.2em
+}
