@@ -204,65 +204,167 @@ html[data-theme="dark"] {
   --ifm-panel-box-shadow:none;
   --ifm-panel-box-shadow-active:0 0px 10px 0px rgba(var(--ifm-color-primary-rgb),0.5);
   --ifm-pre-background:var(--ifm-panel-background-color);
+  --ifm-code-background:var(--ifm-color-emphasis-50);
 }
 
 html[data-theme=dark] .navbar {
   border-bottom:1px solid rgba(0,27,61,.075);
   border-bottom:1px solid var(--ifm-sidebar-border-color);
   box-shadow:none
- }
- html[data-theme=dark] .navbar__sidebar__backdrop {
+}
+html[data-theme=dark] .navbar__sidebar__backdrop {
   background:var(--ifm-color-emphasis-100)
- }
- html[data-theme=dark] .navbar .navbar__item .badge--default {
+}
+html[data-theme=dark] .navbar .navbar__item .badge--default {
   background:var(--ifm-color-emphasis-100);
   color:var(--ifm-color-emphasis-800);
   color:var(--ifm-panel-color)
- }
- html[data-theme=dark] .button.button--secondary {
+}
+html[data-theme=dark] .button.button--secondary {
   --ifm-button-background-color:var(--ifm-panel-background-color);
   --ifm-button-border-color:var(--ifm-panel-border-color);
   --ifm-button-color:var(--ifm-panel-color);
   color:var(--ifm-button-color)
- }
- html[data-theme=dark] .button.button--secondary:hover {
+}
+html[data-theme=dark] .button.button--secondary:hover {
   --ifm-button-background-color:var(--ifm-panel-background-color-active);
   --ifm-button-border-color:var(--ifm-panel-border-color-active);
   --ifm-button-color:var(--ifm-panel-color-active);
   box-shadow:0 0 10px 0 rgba(40,217,242,.5);
   box-shadow:var(--ifm-panel-box-shadow-active)
- }
- html[data-theme=dark] svg [fill="#000000"] {
+}
+html[data-theme=dark] svg [fill="#000000"] {
   fill:#001b3d;
   fill:var(--ifm-heading-color)
- }
- html[data-theme=dark] svg [stroke="#000000"] {
+}
+html[data-theme=dark] svg [stroke="#000000"] {
   stroke:#001b3d;
   stroke:var(--ifm-heading-color)
- }
- html[data-theme=dark] svg [stop-color="#000000"] {
+}
+html[data-theme=dark] svg [stop-color="#000000"] {
   stop-color:#001b3d;
   stop-color:var(--ifm-heading-color)
- }
- html[data-theme=dark] svg [fill="#FFFFFF"] {
+}
+html[data-theme=dark] svg [fill="#FFFFFF"] {
   fill:#fff;
   fill:var(--ifm-background-color)
- }
- html[data-theme=dark] svg [stroke="#FFFFFF"] {
+}
+html[data-theme=dark] svg [stroke="#FFFFFF"] {
   stroke:#fff;
   stroke:var(--ifm-background-color)
- }
- html[data-theme=dark] .menu .menu__link.menu__link--sublist:after {
-  background-image:url('data:image/svg+xml;utf8,<svg alt="Arrow" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="-6 -6 38 38"><path fill="rgba(255,255,255,0.3)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>')
- }
- html[data-theme=dark] input[type=checkbox] {
+}
+ /* .menu .menu__link.menu__link--sublist:after {
+  background-image:url('data:image/svg+xml;utf8,<svg alt="Arrow" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="-6 -6 38 38"><path fill="rgba(255,255,255,0.3)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>') !important
+ } */
+html[data-theme=dark] input[type=checkbox] {
   background:var(--ifm-color-emphasis-200)
- }
- html[data-theme=dark] input[type=checkbox]:checked {
+}
+html[data-theme=dark] input[type=checkbox]:checked {
   background-color:#28d9f2;
   background-color:var(--ifm-color-primary)
- }
+}
 
+/**
+ * menu
+ *
+ * Menu styling generally used as a navigation menu, such a the left-side
+ * menu for the docs section.
+ */
+
+/* .menu > ul.menu__list li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.menu > ul.menu__list li > a {
+  padding-left: 0;
+  padding-right: 0;
+}
+.menu .menu__list-item-hidden {
+  display: none;
+}
+.menu > ul.menu__list > li.menu__list-item div.title {
+  color: var(--ifm-color-emphasis-300);
+  cursor: text;
+  display: flex;
+  justify-content: space-between;
+  line-height: calc( var(--ifm-spacing-vertical) * 1.25 );
+  margin-top: calc( var(--ifm-spacing-vertical) * 1.5 );
+  padding: var(--ifm-menu-link-padding-vertical) 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.menu > ul.menu__list > li.menu__list-item:first-child div.title {
+  margin-top: 0;
+}
+.menu > ul.menu__list ul.menu__list {
+  border-left: 1px solid var(--ifm-hr-border-color);
+  margin-left: 0;
+  padding-left: var(--ifm-menu-link-padding-horizontal);
+}
+.menu > ul.menu__list ul.menu__list .menu__link {
+  border-radius: 0;
+  margin-left: calc( var(--ifm-menu-link-padding-horizontal) * -1 );
+  padding-left: var(--ifm-menu-link-padding-horizontal);
+}
+.menu > ul.menu__list > li > ul.menu__list {
+  border-left: 0px none;
+  padding-left: 0;
+}
+.menu .menu__list-title {
+  color: var(--ifm-color-emphasis-300);
+  text-transform: uppercase;
+}
+.menu .menu__link,
+.menu .menu__link:hover,
+.menu .menu__link.menu__link--active:not(.menu__link--sublist) {
+  background: none;
+  line-height: calc( var(--ifm-spacing-vertical) * 1.25 );
+}
+.menu .menu__link small {
+  font-weight: normal;
+  opacity: 0.75;
+}
+.menu .menu__link.menu__link--sublist::after {
+  background-image: url('data:image/svg+xml;utf8,<svg alt="Arrow" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="-6 -6 38 38"><path fill="rgba(0,0,0,0.3)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: var(--ifm-transition-fast) ease;
+}
+.menu .menu__link.menu__link--sublist:hover::after,
+.menu .menu__link.menu__link--sublist.menu__link--active::after {
+  background-image: url('data:image/svg+xml;utf8,<svg alt="Arrow" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="-6 -6 38 38"><path fill="rgb(40,217,242)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+}
+.menu .menu__list-item.menu__list-item--collapsed .menu__link--sublist::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.menu .menu__link:hover {
+  color: var(--ifm-menu-color-active);
+}
+.menu .menu__link .badges {
+  vertical-align: top;
+  margin-top: -1px;
+}
+.menu .menu__link .badges .badge {
+  background-clip: padding-box;
+  border: 1px solid var(--ifm-color-emphasis-50);
+  border-radius: 0.25em;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.5rem;
+  font-weight: bold;
+  height: 1rem;
+  line-height: 1rem;
+  margin-right: 2px;
+  padding: 0 0.25rem;
+  vertical-align: middle;
+}
+.menu.menu--responsive .menu__button {
+  background: var(--ifm-panel-background-solid);
+  border-color: var(--ifm-color-content-secondary);
+  bottom: 1rem;
+  right: 1rem;
+} */
 
  /* Utils */
  .text-right {

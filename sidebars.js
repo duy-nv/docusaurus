@@ -8,21 +8,85 @@
  */
 
 module.exports = {
-  someSidebar: {
-    DRM: [{
-      type: 'doc',
-      label: 'Introduction',
-      id: 'drm/about/introduction'
-    }, {
-      type: 'category',
-      label: 'Integrate Guide',
-      items: [
-        'drm/guide/android',
-        'drm/guide/ios',
-        'drm/guide/web'
-      ]
-    }],
-    Livestream: ['mdx'],
+  mainSidebar: {
+    LIVESTREAM: [
+      {
+        type: 'category',
+        label: 'About',
+        items: [
+          "livestream/about/doc-platform-introduction"
+        ],
+      },
+      {
+        type: 'category',
+        label: 'Platform API',
+        items: [
+          {
+            type: 'category',
+            label: 'How to call',
+            items: [
+              "livestream/api/doc-server-introduction", 
+              "livestream/api/doc-server-authorization", 
+              "livestream/api/doc-server-result"
+            ],
+          },
+          {
+            type: 'category',
+            label: 'Channel',
+            items: [
+              "livestream/api/api-server-channel"
+            ]
+          },
+        ],
+      },
+      {
+        type: 'category',
+        label: 'Client SDK',
+        items: [
+          {
+            type: 'category',
+            label: 'Android SDK',
+            items: [
+              // "livestream/sdk/android/android", 
+              "livestream/sdk/android/record",
+              {
+                type: 'category',
+                label: 'Playback SDK',
+                items: [
+                  "livestream/sdk/android/playback/exo-plugin"
+                ]
+              }
+            ]
+          },
+          {
+            type: 'category',
+            label: 'iOS SDK',
+            items: [
+              "livestream/sdk/ios/doc-avplayershls-plugin", 
+              "livestream/sdk/ios/doc-sigma-livestream"
+            ]
+          }
+        ],
+      },
+    ],
+    DRM: [
+      {
+        type: 'category',
+        label: 'About',
+        items: [
+          "drm/about/introduction",
+        ],
+      },
+      {
+        type: 'category',
+        label: 'Integrate Guide',
+        items: [
+          'drm/guide/android',
+          'drm/guide/ios',
+          'drm/guide/web'
+        ],
+      },
+    ],
     // API:[
     //   {
     //     id: 'api/basic-spec',

@@ -13,7 +13,7 @@ const specConfigs = require('./specs.config');
 module.exports = {
   title: 'Sigma OTT',
   tagline: 'A High-Performance, Logs, Metrics, & Events Router',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://sigmaott.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -30,7 +30,12 @@ module.exports = {
       },
       items: [
         {
-          to: '/docs/drm/about/introduction',
+          to: '/docs/livestream/about/doc-platform-introduction',
+          label: 'Doc',
+          position: 'left',
+        },
+        {
+          to: 'mainSidebar',
           label: 'Doc',
           position: 'left',
         },
@@ -39,7 +44,7 @@ module.exports = {
           label: 'APIs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        // {to: 'blog', label: 'Blog', position: 'left'},
         // Please keep GitHub link to the right for consistency.
         {
           href: 'https://github.com/facebook/docusaurus',
@@ -51,78 +56,84 @@ module.exports = {
     footer: {
       links: [
         {
-          title: 'Learn',
+          title: 'About',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: 'Livestream platform',
+              to: 'docs/livestream/about/doc-platform-introduction/',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2',
+              label: 'The Team',
+              to: 'community/#team',
             },
+            {
+              label: 'Contact Us',
+              to: 'contact/',
+            },
+            // {
+            //   label: 'Press',
+            //   to: 'press/',
+            // },
+          ],
+        },
+        {
+          title: 'Components',
+          items: [
+            {
+              label: 'Api',
+              to: 'docs/api/doc-server-introduction/',
+            },
+            {
+              label: 'Android Sdk',
+              to: 'docs/sdk/android/android/',
+            },
+            {
+              label: 'iOS Sdk',
+              to: 'docs/sdk/ios/doc-avplayershls-plugin/',
+            },
+          ],
+        },
+        {
+          title: 'Setup',
+          items: [
+            {
+              label: 'How to call',
+              to: 'docs/api/doc-server-introduction/',
+            }
           ],
         },
         {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Chat',
+              to: 'https://gitter.im/thudo-multimedia-jsc/community',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Github',
+              to: 'https://github.com/Thudo-jsc',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Facebook',
+              to: 'https://www.facebook.com/thudoconfession/',
             },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
+            {
+              label: 'Mailing List',
+              to: 'mailing_list/',
+            },
             {
               label: 'Blog',
-              to: 'blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'Legal',
-          // Please do not remove the privacy and terms, it's a legal requirement.
-          items: [
-            {
-              label: 'Privacy',
-              href: 'https://opensource.facebook.com/legal/privacy/',
-            },
-            {
-              label: 'Terms',
-              href: 'https://opensource.facebook.com/legal/terms/',
-            },
-            {
-              label: 'Data Policy',
-              href: 'https://opensource.facebook.com/legal/data-policy/',
-            },
-            {
-              label: 'Cookie Policy',
-              href: 'https://opensource.facebook.com/legal/cookie-policy/',
+              to: 'blog/',
             },
           ],
         },
       ],
       logo: {
-        alt: 'Facebook Open Source Logo',
-        src: 'img/oss_logo.png',
-        href: 'https://opensource.facebook.com',
+        alt: 'Thudomultimedia.vn',
+        src: '/img/logo_thudo.svg',
+        href: 'https://thudomultimedia.vn/',
       },
-      // Please do not remove the credits, help to publicize Docusaurus :)
-      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Thudo, Jsc.`,
     },
     algolia: {
       apiKey: '2356c5cb76b57b43624c6450b0a031cc',
@@ -130,6 +141,10 @@ module.exports = {
       algoliaOptions: {}, // Optional, if provided by Algolia
     },
     specs: specConfigs,
+    prism: {
+      // theme: require("prism-react-renderer/themes/dracula"),
+      additionalLanguages: ["java", "ruby", "php", "objectivec"],
+    },
   },
   presets: [
     [
@@ -139,7 +154,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // editUrl:
             // 'https://github.com/facebook/docusaurus/edit/master/website/',
-          docLayoutComponent: '@site/src/theme/DocPage',
+          // docLayoutComponent: '@site/src/theme/DocPage',
         },
         blog: {
           showReadingTime: true,
