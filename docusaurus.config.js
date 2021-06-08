@@ -31,12 +31,12 @@ module.exports = {
       items: [
         {
           to: '/docs/livestream/about/doc-platform-introduction',
-          label: 'Doc',
+          label: 'Livestream',
           position: 'left',
         },
         {
-          to: 'mainSidebar',
-          label: 'Doc',
+          to: '/docs/drm/about/introduction',
+          label: 'DRM',
           position: 'left',
         },
         {

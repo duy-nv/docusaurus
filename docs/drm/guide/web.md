@@ -15,45 +15,49 @@ sidebar_label: Tích hợp Web SDK
 
 ### Import SDK into project
 
-<!-- ![Web Import SDK!](/img/drm/integrate_web_import.png "Web Import SDK") -->
+![Web Import SDK!](./imgs/integrate_web_import.png "Web Import SDK")
 	
 ### Integrate SigmaPlayer
 
 ```javascript
-	<video id="player"></video>
-	<script src="/public/drm/player/SigmaPlayer.min.js"></script>
+<video id="player"></video>
+<script src="/public/drm/player/SigmaPlayer.min.js"></script>
 ```
 
 **Before using player, config account’s information**
 	
 
 ```javascript
-	const hls = new SigmaManager();
-	
-	hls.config = {
-		enableWorker: true
-	};
-	
-	hls.mediaElm = document.getElementById('player');
-	
-	hls.nativeClient = {
-	    module: "sigma_drm.js",
-	    wasmBaseUrl: window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port : '') + "/public/drm/", // path to static file
-	
-	};
-	
-	hls.appInfo = {
-	    browser: "Google-Chrome",
-	    appId: 6,
-	    "client-id": "clientId"
-	};
-	hls.setAuthenToken("token");
+const hls = new SigmaManager();
+
+hls.config = {
+	enableWorker: true
+};
+
+hls.mediaElm = document.getElementById('player');
+
+hls.nativeClient = {
+	module: "sigma_drm.js",
+	wasmBaseUrl:
+		window.location.protocol + "//" +
+		window.location.hostname +
+		(window.location.port ? ':' +
+		window.location.port : '') +
+		"/public/drm/", // path to static file
+};
+
+hls.appInfo = {
+	browser: "Google-Chrome",
+	appId: 6,
+	"client-id": "clientId"
+};
+hls.setAuthenToken("token");
 ```
 
 **Initialization link source**
 
 ```javascript
-	hls.loadSource('link source', {
-	    method: "sigma"
-	});
+hls.loadSource('link source', {
+	method: "sigma"
+});
 ```

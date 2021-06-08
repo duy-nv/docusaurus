@@ -97,8 +97,8 @@ self.sigmaLive.videoFrameRate = 24;
 self.sigmaLive.sessionPreset = SigmaVideoPreset720x1280;
 ```
 
----
+:::caution
 
 Note: chỉ hoạt động đối với iOS 9.0 trở lên và chạy trên main thread
 
----
+:::

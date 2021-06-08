@@ -7,8 +7,8 @@ Hướng dẫn tích hợp SDK DRM cho các nền tảng, vui lòng chọn nền
 
 ---
 
-<!-- import Jump from '@site/src/components/Jump'; -->
+import Jump from '@site/src/components/base/AppJump';
 
-<!-- <Jump to="/docs/drm/guide/android">Android</Jump> -->
-<!-- <Jump to="/docs/drm/guide/ios">Ios</Jump> -->
-<!-- <Jump to="/docs/drm/guide/web">Web</Jump> -->
+<Jump to="/docs/drm/guide/android">Android</Jump>
+<Jump to="/docs/drm/guide/ios">Ios</Jump>
+<Jump to="/docs/drm/guide/web">Web</Jump>

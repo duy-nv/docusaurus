@@ -8,8 +8,8 @@
  */
 
 module.exports = {
-  mainSidebar: {
-    LIVESTREAM: [
+  // mainSidebar: {
+    livestream: [
       {
         type: 'category',
         label: 'About',
@@ -20,6 +20,7 @@ module.exports = {
       {
         type: 'category',
         label: 'Platform API',
+        collapsed: false,
         items: [
           {
             type: 'category',
@@ -69,10 +70,11 @@ module.exports = {
         ],
       },
     ],
-    DRM: [
+    drm: [
       {
         type: 'category',
         label: 'About',
+        collapsed: false,
         items: [
           "drm/about/introduction",
         ],
@@ -80,6 +82,7 @@ module.exports = {
       {
         type: 'category',
         label: 'Integrate Guide',
+        collapsed: false,
         items: [
           'drm/guide/android',
           'drm/guide/ios',
@@ -117,5 +120,5 @@ module.exports = {
     //     type: 'doc',
     //   }
     // ],
-  },
+  // },
 };
