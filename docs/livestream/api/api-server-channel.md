@@ -82,11 +82,8 @@ POST http://{API-SERVER}/livestream/live
 ```
 
 </div>
-<div class="section">
 
----
-
-**Chú ý**
+:::note
 * Có thể định nghĩa link live play và catchup theo format sau
   * Live: *http://domain-cdn/{STREAM_ID}/master.m3u8*
   * Catchup: *http://domain-cdn/{STREAM_ID}/master_dvr.m3u8*
@@ -95,10 +92,8 @@ POST http://{API-SERVER}/livestream/live
 * **expire**: là khoảng thời gian hết hạn của **streamToken**
 * **transcodeProfile**: là những profile sẽ được chuyển mã, dựa vào từng luồng, danh sách transcodeProfile sẽ không đúng với giá trị nhập vào. Ví dụ: khi broadcaster chỉ truyền lên dữ liệu có độ phân giải **720p** hệ thống sẽ chỉ transcode tối đa đến **720p**
 * Khi trạng thái kênh đã chuyển sang ended, broadcaster sẽ không thể truyền dữ liệu được nữa, bắt buộc phải tạo luồng mới.
+:::
 
----
-
-</div>
 </div>
 
 ## Lập lịch luồng trực tiếp sắp diễn ra
@@ -106,8 +101,6 @@ POST http://{API-SERVER}/livestream/live
 Tạo một luồng trực tiếp chuẩn bị bắt đầu
 
 * Available: **coming in production**
-
-
 
 ## Lấy thông tin các luồng trực tiếp
 
@@ -199,8 +192,6 @@ GET http://{API-SERVER}/livestream/live
 
 </div>
 </div>
-
-
 ## Lấy thông tin kết nối rtmp ingest server với livestreamId
 
 Lấy thông tin server stream của 1 luồng trực tiếp
@@ -245,7 +236,6 @@ Lấy thông tin của 1 luồng trực tiếp
 
 <div class="section-list">
 <div class="section">
-
 ##### HTTP Request
 
 ```
