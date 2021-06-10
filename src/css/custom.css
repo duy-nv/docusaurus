@@ -109,7 +109,7 @@
   --ifm-color-content:var(--ifm-color-emphasis-900);
   --ifm-color-content-inverse:var(--ifm-color-emphasis-0);
   --ifm-color-content-secondary:#606770;
-  --ifm-background-color:transparent;
+  --ifm-background-color:#fff;
   --ifm-background-surface-color:var(--ifm-color-content-inverse);
   --ifm-global-border-width:1px;
   --ifm-global-radius:0.4rem;
@@ -117,7 +117,7 @@
   --ifm-font-color-base:var(--ifm-color-content);
   --ifm-font-color-base-inverse:var(--ifm-color-content-inverse);
   --ifm-font-color-secondary:var(--ifm-color-content-secondary);
-  --ifm-font-family-base:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --ifm-font-family-base:-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   --ifm-font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   --ifm-font-weight-light:300;
   --ifm-font-weight-normal:400;
@@ -127,7 +127,7 @@
   --ifm-line-height-base:1.65;
   --ifm-global-spacing:1rem;
   --ifm-spacing-vertical:var(--ifm-global-spacing);
-  --ifm-spacing-horizontal:var(--ifm-global-spacing);
+  --ifm-spacing-horizontal:calc(var(--ifm-global-spacing)/2);
   --ifm-transition-fast:200ms;
   --ifm-transition-slow:400ms;
   --ifm-global-shadow-lw:0 1px 2px 0 rgba(0,0,0,0.1);
@@ -158,6 +158,20 @@
   /* navbar */
   --ifm-navbar-background-color:var(--ifm-background-color);
   --ifm-sidebar-border-color:var(--ifm-hr-border-color);
+
+  /* alert */
+  --ifm-alert-color:var(--ifm-font-color-base-inverse);
+  --ra-admonition-color:var(--ifm-alert-color);
+
+  /* heading */
+  --ifm-h2-font-size: 2em;
+  --ifm-heading-margin-top: 0;
+  --ifm-heading-line-height: 1.25;
+  --ifm-heading-font-family: Ubuntu, var(--ifm-font-family-base);
+  --ifm-heading-margin-bottom: calc(var(--ifm-spacing-vertical)*3);
+
+  /* section content */
+  --section-content-background-color: #ebedf0;
 }
 
 html[data-theme="dark"] {
@@ -171,6 +185,7 @@ html[data-theme="dark"] {
   --ifm-color-emphasis-50:var(--ifm-color-gray-950);
   --ifm-color-emphasis-50-solid:var(--ifm-color-gray-950);
   --ifm-color-emphasis-75:var(--ifm-color-gray-925);
+  --ifm-color-gray:rgb(224,235,247);
   --ifm-color-gray-25:rgba(224,235,247,0.975);
   --ifm-color-gray-40:rgba(224,235,247,0.96);
   --ifm-color-gray-50:rgba(224,235,247,0.95);
@@ -180,11 +195,13 @@ html[data-theme="dark"] {
   --ifm-color-gray-200:rgba(224,235,247,0.8);
   --ifm-color-gray-300:rgba(224,235,247,0.7);
   --ifm-color-gray-400:rgba(224,235,247,0.6);
-  --ifm-color-gray-500:rgba(224,235,247,0.5);
+  /* rgba(224,235,247,0.5); */
+  --ifm-color-gray-500:#2f374b;
   --ifm-color-gray-600:rgba(224,235,247,0.4);
   --ifm-color-gray-700:rgba(224,235,247,0.3);
   --ifm-color-gray-800:rgba(224,235,247,0.2);
-  --ifm-color-gray-900:rgba(224,235,247,0.1);
+  /* rgba(224,235,247,0.1); */
+  --ifm-color-gray-900:#2f374b;
   --ifm-color-gray-925:rgba(224,235,247,0.075);
   --ifm-color-gray-950:rgba(224,235,247,0.05);
   --ifm-color-gray-960:rgba(224,235,247,0.04);
@@ -205,6 +222,12 @@ html[data-theme="dark"] {
   --ifm-panel-box-shadow-active:0 0px 10px 0px rgba(var(--ifm-color-primary-rgb),0.5);
   --ifm-pre-background:var(--ifm-panel-background-color);
   --ifm-code-background:var(--ifm-color-emphasis-50);
+
+  /* section content */
+  --section-content-background-color: #090a11;
+
+  /* radius */
+  --base-border-radius: 5px;
 }
 
 html[data-theme=dark] .navbar {
@@ -264,6 +287,31 @@ html[data-theme=dark] input[type=checkbox]:checked {
   background-color:var(--ifm-color-primary)
 }
 
+/* Heading */
+h2 > .hash-link,
+h3 > .hash-link,
+h4 > .hash-link,
+h5 > .hash-link,
+h6 > .hash-link {
+  margin-left: -.8em;
+  padding-right: 1.25em;
+}
+
+hash-link {
+  opacity: 0;
+  position: absolute;
+  margin-left: -1.25rem;
+  padding-right: 1.25rem;
+}
+
+h2 > code,
+h3 > code,
+h4 > code,
+h5 > code {
+ font-family:inherit;
+ font-weight:700
+}
+
 /**
  * menu
  *
@@ -271,7 +319,7 @@ html[data-theme=dark] input[type=checkbox]:checked {
  * menu for the docs section.
  */
 
-/* .menu > ul.menu__list li {
+.menu > ul.menu__list li {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -298,7 +346,7 @@ html[data-theme=dark] input[type=checkbox]:checked {
 }
 .menu > ul.menu__list ul.menu__list {
   border-left: 1px solid var(--ifm-hr-border-color);
-  margin-left: 0;
+  /* margin-left: 0; */
   padding-left: var(--ifm-menu-link-padding-horizontal);
 }
 .menu > ul.menu__list ul.menu__list .menu__link {
@@ -332,7 +380,7 @@ html[data-theme=dark] input[type=checkbox]:checked {
 }
 .menu .menu__link.menu__link--sublist:hover::after,
 .menu .menu__link.menu__link--sublist.menu__link--active::after {
-  background-image: url('data:image/svg+xml;utf8,<svg alt="Arrow" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="-6 -6 38 38"><path fill="rgb(40,217,242)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg alt="Arrow" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="-6 -6 38 38"><path fill="rgb(53,120,229)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
 }
 .menu .menu__list-item.menu__list-item--collapsed .menu__link--sublist::after {
   -webkit-transform: rotate(90deg);
@@ -364,7 +412,12 @@ html[data-theme=dark] input[type=checkbox]:checked {
   border-color: var(--ifm-color-content-secondary);
   bottom: 1rem;
   right: 1rem;
-} */
+}
+
+/* Admonition */
+.admonition-heading h5 {
+  color: inherit;
+}
 
  /* Utils */
  .text-right {

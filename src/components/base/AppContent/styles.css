@@ -1,0 +1,25 @@
+.app-content {
+  border-bottom: 1px solid var(--ifm-hr-border-color);
+  margin-bottom: calc(2*var(--ifm-leading));
+  padding-bottom: calc(2*var(--ifm-leading) - var(--ifm-spacing-vertical));
+}
+
+.app-content__heading {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.app-content__heading-title {
+  font-size: 2.5em
+}
+
+.app-content__heading-desc {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 1.15em;
+  margin-top: calc(var(--ifm-heading-margin-bottom)*-0.9);
+  margin-bottom: var(--ifm-heading-margin-bottom);
+}
+
+.app-content__content {
+  padding: 10px 0;
+}

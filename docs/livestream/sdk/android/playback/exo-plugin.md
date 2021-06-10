@@ -3,19 +3,17 @@ title: ExoPlayer Plugin
 description: "About Vector, the log and metrics collector, forwarder, and router"
 sidebar_label: "ExoPlayer plugin"
 ---
-
 ## Yêu cầu hệ thống
 
-	1. Min Sdk version 14
-	2. Exoplayer version 2.9.6 trở lên
+1. Min Sdk version 14
+2. Exoplayer version 2.9.6 trở lên
 
 Để tích hợp hệ thống SHls, vui lòng thực hiện theo các bước sau:
-
-	1. Tích hợp ExoPlayer phiên bản 2.9.6 trở lên
- 	2. Tích hợp module SHls
- 	3. Khởi tạo SHlsExoPlayer
- 	4. Khởi tạo SHlsMediaSource
- 	5. Sử dụng player sau khi hoàn thành
+1. Tích hợp ExoPlayer phiên bản 2.9.6 trở lên
+2. Tích hợp module SHls
+3. Khởi tạo SHlsExoPlayer
+4. Khởi tạo SHlsMediaSource
+5. Sử dụng player sau khi hoàn thành
 
 #### Tích hợp ExoPlayer phiên bản 2.9.6 trở lên
 
@@ -115,7 +113,5 @@ new SHlsTrackSelectionBufferProvider() {
 });
 trackSelector = new DefaultTrackSelector(adaptiveTrackSelectionFactory);
 ```
-
-
 
 Chi tiết việc tích hợp và sử dụng ExoPlayer 2.9.6 có thể tham khảo: [Github ExoPlayer](<https://github.com/google/ExoPlayer>)

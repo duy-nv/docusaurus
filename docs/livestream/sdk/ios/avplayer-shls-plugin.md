@@ -26,7 +26,6 @@ self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
 self.playerLayer= [AVPlayerLayer playerLayerWithPlayer:self.player];
 self.playerLayer.frame = self.view.bounds;
 [self.view.layer addSublayer:self.playerLayer];
-
 ```
 
 #### 2.3. Khởi tạo AVPlayerSHlsPlugin
@@ -34,7 +33,6 @@ self.playerLayer.frame = self.view.bounds;
 ```objectivec
 self.avplayerShlsPlugin = [[AVPlayerSHlsPlugin alloc] init];
 [self.avplayerShlsPlugin initSession:self.player playItem:self.playerItem];
-
 ```
 
 #### 2.4. Play video

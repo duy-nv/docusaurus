@@ -1,0 +1,35 @@
+
+
+.solution-item {
+  background-color: var(--section-content-background-color);
+  border-radius: var(--base-border-radius);
+}
+
+.solution-title {
+  text-align: center;
+  padding: 10px;
+  height: calc(1em*2*var(--ifm-heading-line-height) + 20px);
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+
+.solution-description {
+  height: calc(1em*3*var(--ifm-line-height-base));
+  overflow: hidden;
+}
+
+.solution-content {
+  text-align: center;
+  padding: 10px;
+}
+
+.solution-item .solution-thumb {
+  height: 150px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+}
+
+.solution-item .solution-thumb img {
+  height: 100%
+}
