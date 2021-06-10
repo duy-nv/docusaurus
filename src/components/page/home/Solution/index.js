@@ -7,10 +7,11 @@
  * @format
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 // eslint-disable-next-line import/no-unresolved
 import AppContent from '@site/src/components/base/AppContent'
 import classnames from 'classnames';
+// import { WOW } from 'wowjs';
 import styles from './styles.module.css';
  
 const solutions = [
@@ -42,7 +43,7 @@ const solutions = [
 
 const SolutionItem = function({ title, description, thumb}) {
   return (
-    <div className={classnames(styles['solution-item'])}>
+    <div className={classnames(styles['solution-item'], 'wow')}>
       <div className={styles['solution-thumb']}>
         <img src={thumb} alt={title} />
       </div>
@@ -55,6 +56,9 @@ const SolutionItem = function({ title, description, thumb}) {
 }
 
 export default function Solutions() {
+  // useEffect(() => {
+  //   new WOW({ offset: 10}).init();
+  // })
   const SolutionList = solutions.map((item, idx) => {
     return (
       // eslint-disable-next-line react/no-array-index-key
@@ -65,7 +69,7 @@ export default function Solutions() {
   })
 
   const Main = (
-    <div className="row">{ SolutionList }</div>
+    <div className="row wow fadeInDown">{ SolutionList }</div>
   )
  
   return (

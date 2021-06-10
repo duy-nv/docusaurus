@@ -1,0 +1,13 @@
+.cdn-content {}
+
+.cdn-content__title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cdn-content__title .row h4 {
+}
+
+.cdn-content__desc img {
+  border-radius: var(--base-border-radius);
+}
