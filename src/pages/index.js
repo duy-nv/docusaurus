@@ -7,7 +7,8 @@
  * @format
  */
 
-import React from 'react';
+/* eslint-disable import/no-unresolved */
+import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -15,7 +16,14 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Banner from '@site/src/components/page/home/Banner';
 import Solutions from '@site/src/components/page/home/Solution';
+import DrmSolution from '@site/src/components/page/home/Solution/DataManagement';
+import CdnSolution from '@site/src/components/page/home/Solution/CDN';
+import Analytic from '@site/src/components/page/home/Solution/Analytic';
+
+// import { WOW } from 'wowjs';
+import WOW from 'wowjs';
 import styles from './styles.module.css';
+import './styles.css';
 
 const features = [
   {
@@ -66,6 +74,9 @@ function Feature({imageUrl, title, description}) {
 }
 
 export default function Home() {
+  useEffect(() => {
+    new WOW.WOW().init();
+  })
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
   return (
@@ -76,9 +87,12 @@ export default function Home() {
       <Banner />
       <main>
         <Solutions />
-        {features && features.length > 0 && (
+        <DrmSolution />
+        <CdnSolution />
+        <Analytic />
+        {/* {features && features.length > 0 && (
           <section className={styles.features}>
-            <div className="container">
+            <div className="container wow flipInY">
               <div className="row">
                 {features.map(({title, imageUrl, description}) => (
                   <Feature
@@ -91,7 +105,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-        )}
+        )} */}
       </main>
     </Layout>
   );

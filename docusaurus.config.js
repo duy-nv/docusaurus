@@ -45,12 +45,11 @@ module.exports = {
           position: 'left',
         },
         // {to: 'blog', label: 'Blog', position: 'left'},
-        // Please keep GitHub link to the right for consistency.
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
+        // {
+        //   href: 'https://github.com/facebook/docusaurus',
+        //   label: 'GitHub',
+        //   position: 'right',
+        // },
       ],
     },
     footer: {
@@ -70,10 +69,6 @@ module.exports = {
               label: 'Contact Us',
               to: 'contact/',
             },
-            // {
-            //   label: 'Press',
-            //   to: 'press/',
-            // },
           ],
         },
         {
@@ -93,15 +88,15 @@ module.exports = {
             },
           ],
         },
-        {
-          title: 'Setup',
-          items: [
-            {
-              label: 'How to call',
-              to: 'docs/api/doc-server-introduction/',
-            }
-          ],
-        },
+        // {
+        //   title: 'Setup',
+        //   items: [
+        //     {
+        //       label: 'How to call',
+        //       to: 'docs/api/doc-server-introduction/',
+        //     }
+        //   ],
+        // },
         {
           title: 'Community',
           items: [
@@ -152,13 +147,10 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // editUrl:
-            // 'https://github.com/facebook/docusaurus/edit/master/website/',
           // docLayoutComponent: '@site/src/theme/DocPage',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl:
             'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         },
@@ -168,4 +160,12 @@ module.exports = {
       },
     ],
   ],
+  // stylesheets: [
+  //  'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css',
+  // ],
+  stylesheets: [
+    // 'https://fonts.googleapis.com/css?family=Ubuntu|Roboto|Source+Code+Pro',
+    'https://at-ui.github.io/feather-font/css/iconfont.css',
+  ],
 };
+

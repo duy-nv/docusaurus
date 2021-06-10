@@ -28,10 +28,9 @@
   /* theme */
   /* --ifm-background-color: #fff;
   --ifm-background-color-rgb: 255, 255, 255;
-  --ifm-code-font-size: 95%;
+  --ifm-code-font-size: 95%; */
 
   /* footer */
-  /* --ifm-footer-background-color: var(--ifm-background-color); */
 
   --ifm-dark-value:10%;
   --ifm-darker-value:15%;
@@ -170,8 +169,14 @@
   --ifm-heading-font-family: Ubuntu, var(--ifm-font-family-base);
   --ifm-heading-margin-bottom: calc(var(--ifm-spacing-vertical)*3);
 
+  /* footer */
+  --ifm-footer-background-color: var(--ifm-background-color);
+
   /* section content */
   --section-content-background-color: #ebedf0;
+
+  /* radius */
+  --base-border-radius: 5px;
 }
 
 html[data-theme="dark"] {
@@ -225,9 +230,6 @@ html[data-theme="dark"] {
 
   /* section content */
   --section-content-background-color: #090a11;
-
-  /* radius */
-  --base-border-radius: 5px;
 }
 
 html[data-theme=dark] .navbar {
@@ -435,4 +437,20 @@ h5 > code {
   margin: 0 auto;
   padding: 0 var(--ifm-spacing-horizontal);
   width: 100%;
+}
+
+/* form */
+input[type="email"], input[type="text"] {
+  background: var(--ifm-panel-background);
+  border: 1px solid var(--ifm-panel-border-color);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-panel-box-shadow);
+  box-sizing: border-box;
+  color: var(--ifm-font-base-color);
+  display: inline-block;
+  font-size: calc(0.8rem * var(--ifm-button-size-multiplier));
+  line-height: 1.5;
+  padding: calc( var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier) ) 0.8em;
+  transition: var(--ifm-transition-slow) ease;
+  vertical-align: middle;
 }
