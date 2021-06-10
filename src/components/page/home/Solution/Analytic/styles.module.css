@@ -1,8 +1,8 @@
-.drm-content {
+.analytic {
 
 }
 
-.drm-content__left {
+.analytic__left {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,24 +12,24 @@
   padding: 15px;
 }
 
-.drm-content__left img {
+.analytic__left img {
   margin-right: 10px;
 }
 
-.drm-content__left ul {
+.analytic__left ul {
   margin-bottom: 0;
 }
 
-.drm-content__left ul li:not(:last-child) {
+.analytic__left ul li:not(:last-child) {
   margin-bottom: 15px;
 }
 
-.drm-content__right {
+.analytic__right {
   overflow: hidden;
   padding: 15px;
 }
 
-.drm-content__right img {
+.analytic__right img {
   height: 100%;
 }
 
