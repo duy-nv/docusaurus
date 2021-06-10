@@ -1,0 +1,27 @@
+.drm-content {
+
+}
+
+.drm-content__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.drm-content__left ul {
+  margin-bottom: 0;
+}
+
+.drm-content__left ul li:not(:last-child) {
+  margin-bottom: 2em;
+}
+
+.drm-content__right {
+  overflow: hidden;
+}
+
+.drm-content__right img {
+  height: 100%;
+}
+

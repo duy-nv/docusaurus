@@ -14,10 +14,13 @@
 }
 
 .app-content__heading-desc {
+  max-width: 75%;
   color: var(--ifm-color-emphasis-600);
   font-size: 1.15em;
   margin-top: calc(var(--ifm-heading-margin-bottom)*-0.9);
   margin-bottom: var(--ifm-heading-margin-bottom);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .app-content__content {

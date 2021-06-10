@@ -1,0 +1,3 @@
+.banner-main {
+  margin-bottom: calc(2*var(--ifm-leading));
+}
