@@ -21,7 +21,7 @@ import CdnSolution from '@site/src/components/page/home/Solution/CDN';
 import Analytic from '@site/src/components/page/home/Solution/Analytic';
 
 // import { WOW } from 'wowjs';
-import WOW from 'wowjs';
+// import WOW from 'wowjs';
 import styles from './styles.module.css';
 import './styles.css';
 
@@ -74,9 +74,9 @@ function Feature({imageUrl, title, description}) {
 }
 
 export default function Home() {
-  useEffect(() => {
-    new WOW.WOW().init();
-  })
+  // useEffect(() => {
+  //   new WOW.WOW().init();
+  // })
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
   return (

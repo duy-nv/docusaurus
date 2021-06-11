@@ -5,12 +5,12 @@ sidebar_label: Livestream Management
 hide_table_of_contents: true
 ---
 
-import AppSpec from '@site/src/components/specs/SpecDetail';
+import SpecDetail from '@site/src/components/open_apis/SpecDetail';
 
-<AppSpec 
+<SpecDetail 
   spec = {{
     value: 'livestream-management.json',
     label: 'Management'
   }}>
-</AppSpec>
+</SpecDetail>
 

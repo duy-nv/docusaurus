@@ -17,7 +17,7 @@ export default function Banner(props) {
     <section className="banner-main">
       <div className="banner-main__bg">
         <video autoPlay loop>
-          <source src="/static/media/banner-intro.mp4" type="video/mp4" muted />
+          <source src="/media/banner-intro.mp4" type="video/mp4" muted />
         </video>
       </div>
       <div className="banner-main__content">

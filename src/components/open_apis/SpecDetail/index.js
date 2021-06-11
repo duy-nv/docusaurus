@@ -6,33 +6,32 @@
  *
  * @format
  */
-import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
-// import BrowserOnly from '@docusaurus/BrowserOnly';
-import 'rapidoc';
+import React, { useState, useEffect } from 'react';
+// import { useHistory } from "react-router-dom";
 import SpecSelect from '../SpecSelect';
 import AppSpec from '../AppSpec';
 
 const SpecDetail = (props) => {
   const { spec } = props;
   const [ specUrl, setSpec ] = useState(spec.value);
-  const history = useHistory();
+  // const history = useHistory();
+
+  useEffect(() => {
+    setSpec(spec.value)
+  })
 
   const changeSpec = function(opt) {
-    setSpec(opt.value);
-    history.push(`${opt.path}`)
+    window.location.href = `${opt.path}`
   }
-  // if (typeof window === 'undefined') {
-  //   return <div />;
-  // }
+
   return (
     <div>
       <div className="row">
         <div className="col col--3 col--offset-9">
-          {/* <SpecSelect specUrl = { spec } onChange = { changeSpec }/> */}
+          <SpecSelect specUrl = { spec } onChange = { changeSpec }/>
         </div>
       </div>
-      {/* <AppSpec specUrl = { specUrl }/> */}
+      <AppSpec specUrl = { specUrl }/>
     </div>
   )
 }

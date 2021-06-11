@@ -1,0 +1,17 @@
+rapi-doc {
+  --primary-color: var(--ifm-color-primary);
+  --bg: var(--ifm-background-color);
+  
+  /* Navbar */
+  --nav-accent-color: var(--ifm-color-primary);
+  --nav-bg-color: var(--ifm-background-color);
+  --nav-hover-bg-color: var(--ifm-menu-color-background-hover);
+  --nav-text-color: var(--ifm-menu-color);
+  --nav-hover-text-color: var(--ifm-menu-color);
+
+  --fg: var(--ifm-font-color-base);
+}
+
+html[data-theme="dark"] rapi-doc {
+  --input-bg: var(--ifm-dropdown-background-color);
+}

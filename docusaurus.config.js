@@ -59,7 +59,7 @@ module.exports = {
           items: [
             {
               label: 'Livestream platform',
-              to: 'docs/livestream/about/doc-platform-introduction/',
+              to: '/docs/livestream/about/doc-platform-introduction',
             },
             {
               label: 'The Team',

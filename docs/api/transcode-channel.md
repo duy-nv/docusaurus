@@ -2,15 +2,15 @@
 title: Transcode Channel
 hide_title: true
 sidebar_label: Transcode Channel
-hide_table_of_contents: true
+hide_table_of_contents: true  
 ---
 
-import AppSpec from '@site/src/components/specs/SpecDetail';
+import SpecDetail from '@site/src/components/open_apis/SpecDetail';
 
-<AppSpec 
+<SpecDetail 
   spec = {{
     value: 'transcode-channel.json',
     label: 'Channel'
   }}>
-</AppSpec>
+</SpecDetail>
 

@@ -5,12 +5,12 @@ sidebar_label: Transcode Template
 hide_table_of_contents: true
 ---
 
-import AppSpec from '@site/src/components/specs/SpecDetail';
+import SpecDetail from '@site/src/components/open_apis/SpecDetail';
 
-<AppSpec 
+<SpecDetail 
   spec = {{
     value: 'transcode-template.json',
     label: 'Template'
   }}>
-</AppSpec>
+</SpecDetail>
 

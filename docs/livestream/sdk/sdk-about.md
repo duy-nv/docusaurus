@@ -11,7 +11,7 @@ Sigma Livestream Android sdk gồm 2 bộ sdk riêng biệt gồm:
 
 ---
 
-<!-- import Jump from '@site/src/components/Jump'; -->
+import Jump from '@site/src/components/base/AppJump';
 
-<!-- <Jump to="/docs/sdk/android/">Android SDK</Jump> -->
-<!-- <Jump to="/docs/sdk/ios/">IOs SDK</Jump> -->
+<Jump to="/docs/sdk/android/">Android SDK</Jump>
+<Jump to="/docs/sdk/ios/">IOs SDK</Jump>
