@@ -18,12 +18,20 @@ This command starts a local development server and opens up a browser window. Mo
 
 ### Build
 
-```
-$ yarn build
-```
+* Step 01
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+  ```
+  $ yarn build
+  ```
 
+  This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+* Step 02
+  This command copy spec files into `build` directory
+
+  ```
+  $ yarn specs
+  ```
 ### Deployment
 
 ```
