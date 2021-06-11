@@ -20,6 +20,9 @@ module.exports = {
   favicon: '/favicon.ico',
   organizationName: 'thudojsc',
   projectName: 'sigma-ott',
+  customFields: {
+    metadata: require('./metadata'),
+  },
   themeConfig: {
     hideableSidebar: true,
     navbar: {
@@ -67,7 +70,7 @@ module.exports = {
             },
             {
               label: 'Contact Us',
-              to: 'contact/',
+              to: 'contact',
             },
           ],
         },
@@ -75,16 +78,20 @@ module.exports = {
           title: 'Components',
           items: [
             {
-              label: 'Api',
-              to: 'docs/api/doc-server-introduction/',
+              label: 'API',
+              to: 'docs/api/authentication',
             },
             {
-              label: 'Android Sdk',
-              to: 'docs/sdk/android/android/',
+              label: 'Android SDK',
+              to: '/docs/drm/guide/android',
             },
             {
-              label: 'iOS Sdk',
-              to: 'docs/sdk/ios/doc-avplayershls-plugin/',
+              label: 'iOS SDK',
+              to: 'docs/drm/guide/ios',
+            },
+            {
+              label: 'Web SDK',
+              to: 'docs/drm/guide/web',
             },
           ],
         },
@@ -148,6 +155,8 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // docLayoutComponent: '@site/src/theme/DocPage',
+          editUrl:
+            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         },
         blog: {
           showReadingTime: true,

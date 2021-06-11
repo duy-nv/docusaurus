@@ -50,6 +50,7 @@ function Footer() {
   const {footer} = themeConfig;
 
   const {copyright, links = [], logo = {}} = footer || {};
+  console.log('LINKs', links);
   const logoUrl = useBaseUrl(logo.src);
 
   const sources = {
@@ -77,13 +78,27 @@ function Footer() {
                 <MailingListForm description={false} width="150px" />
               </div>
               <div>
-                <a href="https://twitter.com/timberdotio" target="_blank" rel="noreferrer"><i className="feather icon-twitter" alt="Vector's Twitter" /></a>
+                <a
+                  href="https://twitter.com/timberdotio"
+                  target="_blank" rel="noreferrer">
+                    <i className="feather icon-twitter" alt="Vector's Twitter" />
+                </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://chat.vector.dev" target="_blank" rel="noreferrer"><i className="feather icon-message-circle" alt="Vector's Chat" /></a>
+                <a
+                  href="https://chat.vector.dev"
+                  target="_blank" rel="noreferrer">
+                    <i className="feather icon-message-circle" alt="Vector's Chat" />
+                </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://github.com/timberio/vector" target="_blank" rel="noreferrer"><i className="feather icon-github" alt="Vector's Github Repo" /></a>
+                <a href="https://github.com/timberio/vector"
+                  target="_blank" rel="noreferrer">
+                    <i className="feather icon-github" alt="Vector's Github Repo" />
+                </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://vector.dev/blog/atom.xml" target="_blank" rel="noreferrer"><i className="feather icon-rss" alt="Vector's RSS feed" /></a>
+                <a href="https://vector.dev/blog/atom.xml"
+                  target="_blank" rel="noreferrer">
+                    <i className="feather icon-rss" alt="Vector's RSS feed" />
+                </a>
               </div>
             </div>
             {links.map((linkItem, i) => (

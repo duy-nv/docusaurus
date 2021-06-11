@@ -230,6 +230,9 @@ html[data-theme="dark"] {
 
   /* section content */
   --section-content-background-color: #090a11;
+
+  /* hero */
+  --ifm-hero-background-color: var(--ifm-background-color);
 }
 
 html[data-theme=dark] .navbar {
@@ -312,6 +315,11 @@ h4 > code,
 h5 > code {
  font-family:inherit;
  font-weight:700
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--ifm-hr-border-color);
 }
 
 /**
@@ -453,4 +461,282 @@ input[type="email"], input[type="text"] {
   padding: calc( var(--ifm-button-padding-vertical) * var(--ifm-button-size-multiplier) ) 0.8em;
   transition: var(--ifm-transition-slow) ease;
   vertical-align: middle;
+}
+
+/**
+ * header
+ *
+ * Generic empty state. Used for showing no results, etc.
+ */
+
+header {
+  border-bottom: 2px solid var(--ifm-hr-border-color);
+  margin-bottom: calc( 2 * var(--ifm-leading) );
+}
+header .badges {
+  float: right;
+  font-family: monospace;
+  margin-top: 0.5rem;
+}
+header .badges .badge {
+  margin-left: 2px;
+}
+header h1 {
+  font-family: Ubuntu, var(--ifm-font-family-base);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/**
+ * hero
+ *
+ * Large hero component typically used on marketing pages.
+ */
+
+ @keyframes hero {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+header.hero h1 {
+  font-size: 2.5rem;
+}
+.hero {
+  display: block;
+  align-items: center;
+  min-height: 200px;
+  padding: 3em 0;
+  position: relative;
+  text-align: center;
+}
+.hero .hero__subtitle {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 1.1rem;
+  margin-top: 0.3rem;
+}
+.hero .hero__subtitle a {
+  color: var(--ifm-color-content);
+  text-decoration: underline;
+}
+.hero .hero__subtitle a:hover {
+  color: var(--ifm-link-color);
+}
+.hero .hero__buttons {
+  --ifm-button-padding-vertical: 0.5rem;
+  --ifm-button-padding-horizontal: 4rem;
+}
+.hero .hero__buttons .button {
+  border-radius: 2rem;
+  margin-right: 1rem;
+  min-width: 240px;
+}
+.hero .hero__buttons .button:last-child {
+  margin-right: 0;
+}
+.hero.hero--full-height {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc( 100vh - var(--ifm-navbar-height) );
+}
+@media (max-width: 996px) {
+  .hero {
+    min-height: 100px;
+    padding: 2em 0;
+  }
+  .hero .hero__buttons .button {
+    --ifm-button-padding-horizontal: 2rem;
+    min-width: 180px;
+  }
+}
+@media (max-width: 480px) {
+  .hero .hero__buttons .button {
+    display: block;
+    border-radius: 2rem;
+    margin: 0 0 1rem 0;
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/**
+ * panel
+ */
+.panel {
+  background: var(--ifm-panel-background);
+  border: 1px solid var(--ifm-panel-border-color);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-panel-box-shadow);
+  color: var(--ifm-font-base-color);
+  display: block;
+  margin-bottom: var(--ifm-spacing-vertical);
+  padding: calc( var(--ifm-spacing-vertical) * 1.5 ) calc( var(--ifm-spacing-horizontal) * 2 );
+}
+.panel.panel--link {
+  transition: var(--ifm-transition-fast) ease;
+}
+.panel.panel--link:hover {
+  background: var(--ifm-panel-background-active);
+  border-color: var(--ifm-panel-border-color-active);
+  box-shadow: var(--ifm-panel-box-shadow-active);
+  text-decoration: none;
+}
+.panel .panel--icon {
+  font-size: 4em;
+  line-height: 1;
+  margin: 0 0 var(--ifm-spacing-vertical) 0;
+}
+.panel .panel--title {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.panel .panel--description {
+  font-size: 0.95em;
+  opacity: 0.5;
+}
+
+
+/**
+ * section
+ *
+ * Sections are generally used on marketing pages to focus on separate topics.
+ */
+
+ section {
+  border-bottom: 1px solid var(--ifm-hr-border-color);
+  margin-bottom: calc( 2 * var(--ifm-leading) );
+  padding-bottom: calc( ( 2 * var(--ifm-leading) ) - var(--ifm-spacing-vertical) );
+}
+section .sub-title {
+  color: var(--ifm-color-emphasis-600);
+  margin-top: calc( var(--ifm-heading-margin-bottom) * -1 );
+  margin-bottom: var(--ifm-heading-margin-bottom);
+}
+section.shade {
+  background: var(--ifm-panel-background);
+  padding-left: var(--ifm-spacing-horizontal);
+  padding-right: var(--ifm-spacing-horizontal);
+}
+section:last-child {
+  border-bottom: 0px none;
+  margin-bottom: 0;
+}
+header + section.shade {
+  margin-top: calc( -1 * (( var(--ifm-spacing-vertical) * 2 ) - 5px ));
+  padding-top: var(--ifm-spacing-vertical);
+}
+
+/**
+ * section-list
+ *
+ * A section list is a generic list that allows for larger sections with
+ * headings. This is used for options, fields, or step-by-step guides.
+ */
+.section-list {
+  border-left: 1px solid var(--ifm-hr-border-color);
+  margin-left: 0.25em;
+}
+.section-list > .section {
+  border-radius: 5px;
+  font-size: 0.95em;
+  padding-bottom: calc( var(--ifm-spacing-vertical) / 1.5 );
+  padding-left: var(--ifm-spacing-horizontal);
+}
+.section-list > .section:last-child {
+  padding-bottom: 0
+}
+.section-list > .section > .badges {
+  float: right;
+  margin-top: -0.25em;
+  margin-bottom: 0.5em;
+  text-align: right;
+}
+.section-list > .section > .badges .badge {
+  font-size: 0.7em;
+  margin-left: 3px;
+}
+.section-list > .section > .badges .badge:first-child {
+  margin-left: 0;
+}
+.section-list > .section > h3,
+.section-list > .section > h4,
+.section-list > .section > h5,
+.section-list > .section > h6 {
+  margin-bottom: 1em;
+}
+.section-list > .section > h3 .hash-link,
+.section-list > .section > h4 .hash-link,
+.section-list > .section > h5 .hash-link,
+.section-list > .section > h6 .hash-link {
+  margin-left: calc((var(--ifm-spacing-horizontal) * -1.75) - var(--ifm-spacing-horizontal)) !important;
+  padding-right: 3em;
+}
+.section-list:not(.section-list--no-bullet) > .section > h3::before,
+.section-list:not(.section-list--no-bullet) > .section > h4::before,
+.section-list:not(.section-list--no-bullet) > .section > h5::before,
+.section-list:not(.section-list--no-bullet) > .section > h6::before,
+.section-list > .section > .section--bullet {
+  content: "• ";
+  float: left;
+  display: block;
+  width: calc( var(--ifm-spacing-horizontal) * 2);
+  margin-left: calc( var(--ifm-spacing-horizontal) * -2 );
+  text-align: center;
+}
+.section-list > .section:hover > h3 > .hash-link,
+.section-list > .section:hover > h4 > .hash-link,
+.section-list > .section:hover > h5 > .hash-link,
+.section-list > .section:hover > h6 > .hash-link {
+  opacity: 1;
+}
+.section-list > .section > .sub__title {
+  margin-top: -0.4em;
+  margin-bottom: 0.25em;
+}
+.section-list > .section .info {
+  border-left: 1px solid var(--ifm-hr-border-color);
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.9em;
+  margin-top: calc( var(--ifm-spacing-horizontal) * -1 );
+  margin-bottom: calc( var(--ifm-spacing-vertical) / 2 );
+  margin-left: 0.25em;
+  padding-left: var(--ifm-spacing-horizontal);
+}
+.section-list > .section .info > div:before {
+  content: "• ";
+  float: left;
+  display: block;
+  width: calc( var(--ifm-spacing-horizontal) * 2);
+  margin-left: calc( var(--ifm-spacing-horizontal) * -2 );
+  text-align: center;
+}
+.section-list > .section .info .show-more {
+  color: var(--ifm-color-primary);
+  cursor: pointer;
+}
+.section-list > .section .info .examples {
+  margin-top: 0.5em;
+}
+.section-list.section-list--lg > .section {
+  margin-top: calc( var(--ifm-spacing-vertical) * 2 );
+}
+.section-list.section-list--compact > .section {
+  padding-top: calc( var(--ifm-spacing-vertical) / 4 );
+  padding-bottom: calc( var(--ifm-spacing-vertical) / 4 );
+}
+.section-list.section-list--compact > .section > h4 {
+  font-weight: normal;
+  margin: 0;
+}
+.section-list.section-list--compact > .section > h4 .badge {
+
+}
+.section-list.section-list--compact > .section:last-child > h4 {
+  margin-bottom: var(--ifm-spacing-vertical);
+}
+.section-list.section-list--hover > .section:hover {
+  background: var(--ifm-panel-background);
 }
