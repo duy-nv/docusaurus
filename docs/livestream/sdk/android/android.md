@@ -13,8 +13,8 @@ Sigma Livestream Android sdk gồm 2 bộ sdk riêng biệt gồm:
 
 import Jump from '@site/src/components/base/AppJump';
 
-<Jump to="/docs/sdk/android/record/">Android Live Kit</Jump>
-<Jump to="/docs/sdk/android/playback/exo-plugin">Android Playback SDK</Jump>
+<Jump to="/docs/livestream/sdk/android/record">Android Live Kit</Jump>
+<Jump to="/docs/livestream/sdk/android/playback/exo-plugin">Android Playback SDK</Jump>
 
 
 

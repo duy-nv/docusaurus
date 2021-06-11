@@ -50,7 +50,6 @@ function Footer() {
   const {footer} = themeConfig;
 
   const {copyright, links = [], logo = {}} = footer || {};
-  console.log('LINKs', links);
   const logoUrl = useBaseUrl(logo.src);
 
   const sources = {

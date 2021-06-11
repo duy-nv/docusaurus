@@ -119,14 +119,14 @@ module.exports = {
               label: 'Facebook',
               to: 'https://www.facebook.com/thudoconfession/',
             },
-            {
-              label: 'Mailing List',
-              to: 'mailing_list/',
-            },
-            {
-              label: 'Blog',
-              to: 'blog/',
-            },
+            // {
+            //   label: 'Mailing List',
+            //   to: 'mailing_list',
+            // },
+            // {
+            //   label: 'Blog',
+            //   to: 'blog',
+            // },
           ],
         },
       ],

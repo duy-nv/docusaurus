@@ -73,10 +73,10 @@ curl http://example.com/api -X POST \
 
 | Resource                        | description                                               |
 | ------------------------------- | :-------------------------------------------------------- |
-| [Channel](channel)              | Luồng trực tiếp đang được phát hoặc chuẩn bị được phát    |
-| [Webhook](webhook)              | Url Callback các sự kiện live và offline luồng trực tiếp  |
-| [Search](search)                | Tìm kiếm kênh, video theo các tiêu chí đề ra              |
-| [Insighs & Analytics](analytic) | Thống kê và phân tích các luồng trực tiếp **coming soon** |
+| [Channel](api-server-channel)              | Luồng trực tiếp đang được phát hoặc chuẩn bị được phát    |
+| [Webhook](api-server-webhook)              | Url Callback các sự kiện live và offline luồng trực tiếp  |
+| [Search](doc-server-introduction)                | Tìm kiếm kênh, video theo các tiêu chí đề ra              |
+| [Insighs & Analytics](doc-server-introduction) | Thống kê và phân tích các luồng trực tiếp **coming soon** |
 
 ## Hướng dẫn
 

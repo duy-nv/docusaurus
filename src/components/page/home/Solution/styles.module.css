@@ -1,8 +1,7 @@
-
-
 .solution-item {
   background-color: var(--section-content-background-color);
   border-radius: var(--base-border-radius);
+  margin-bottom: 10px;
 }
 
 .solution-title {
